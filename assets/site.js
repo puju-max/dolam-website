@@ -15,9 +15,9 @@ document.addEventListener('click',()=>document.querySelectorAll('.nav-wrap').for
 const explorerData={
  chem:{
   "Surface Care":["Surface Care","Daily and periodic chemistry for hard surfaces, selected around soil type, material compatibility and operational routine.","assets/surface-care.jpg","Cleaner wiping down a stone countertop"],
-  "Floor Care":["Floor Care","A floor-care plan starts with surface type, traffic level, finish requirements and the cleaning method in use."],
-  "Washroom Hygiene":["Washroom Hygiene","Build a routine around touchpoints, scale, odour control and user experience."],
-  "Kitchen & Foodservice":["Kitchen & Foodservice","Match products to grease load, food-contact considerations and cleaning frequency."],
+  "Floor Care":["Floor Care","A floor-care plan starts with surface type, traffic level, finish requirements and the cleaning method in use.","assets/floor-care.jpg","Operator running a floor scrubber across a polished lobby floor","74% 38%"],
+  "Washroom Hygiene":["Washroom Hygiene","Build a routine around touchpoints, scale, odour control and user experience.","assets/washroom-care.jpg","Cleaner wiping down a washroom vanity"],
+  "Kitchen & Foodservice":["Kitchen & Foodservice","Match products to grease load, food-contact considerations and cleaning frequency.","assets/kitchen.jpg","Cleaner wiping a stainless-steel prep table in a commercial kitchen","82% 55%"],
   "Specialist Applications":["Specialist Applications","Specialist tasks need a defined process, compatibility check and controlled use."]
  },
  supply:{
@@ -34,8 +34,9 @@ document.querySelectorAll('[data-explorer]').forEach(ex=>{
    ex.querySelectorAll('button[data-key]').forEach(x=>x.classList.remove('active'));
    btn.classList.add('active');
    const d=explorerData[type][btn.dataset.key]; title.textContent=d[0]; copy.textContent=d[1];
-   if(media){ media.hidden=!d[2]; if(d[2]){ const img=media.querySelector('img'); img.src=d[2]; img.alt=d[3]||''; } }
- }))
+   if(media){ media.hidden=!d[2]; if(d[2]){ const img=media.querySelector('img'); img.src=d[2]; img.alt=d[3]||''; img.style.objectPosition=d[4]||''; } }
+ }));
+ if(media) addEventListener('load',()=>Object.values(explorerData[type]).forEach(d=>{ if(d[2]) new Image().src=d[2]; }));
 });
 
 const hotspotCopy=[
