@@ -1,2 +1,1 @@
-# dolam-website
-DOLAM Professional Cleaning &amp; Hygiene Solutions
+DOLAM website — ten standalone HTML pages. Open index.html or upload all HTML files to the Preview branch root. Navigation links across actual HTML files. Images use external Pexels URLs. Contact form is a demo; configure a real endpoint before production. This is a reconstruction based on approved design specifications, not an exact recovered source.
