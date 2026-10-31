@@ -14,7 +14,7 @@ document.addEventListener('click',()=>document.querySelectorAll('.nav-wrap').for
 
 const explorerData={
  chem:{
-  "Surface Care":["Surface Care","Daily and periodic chemistry for hard surfaces, selected around soil type, material compatibility and operational routine."],
+  "Surface Care":["Surface Care","Daily and periodic chemistry for hard surfaces, selected around soil type, material compatibility and operational routine.","assets/surface-care.jpg","Cleaner wiping down a stone countertop"],
   "Floor Care":["Floor Care","A floor-care plan starts with surface type, traffic level, finish requirements and the cleaning method in use."],
   "Washroom Hygiene":["Washroom Hygiene","Build a routine around touchpoints, scale, odour control and user experience."],
   "Kitchen & Foodservice":["Kitchen & Foodservice","Match products to grease load, food-contact considerations and cleaning frequency."],
@@ -29,11 +29,12 @@ const explorerData={
  }
 };
 document.querySelectorAll('[data-explorer]').forEach(ex=>{
- const type=ex.dataset.explorer, title=ex.querySelector('[data-title]'), copy=ex.querySelector('[data-copy]');
+ const type=ex.dataset.explorer, title=ex.querySelector('[data-title]'), copy=ex.querySelector('[data-copy]'), media=ex.querySelector('[data-media]');
  ex.querySelectorAll('button[data-key]').forEach(btn=>btn.addEventListener('click',()=>{
    ex.querySelectorAll('button[data-key]').forEach(x=>x.classList.remove('active'));
    btn.classList.add('active');
    const d=explorerData[type][btn.dataset.key]; title.textContent=d[0]; copy.textContent=d[1];
+   if(media){ media.hidden=!d[2]; if(d[2]){ const img=media.querySelector('img'); img.src=d[2]; img.alt=d[3]||''; } }
  }))
 });
 
