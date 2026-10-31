@@ -17,8 +17,8 @@ const explorerData={
   "Surface Care":["Surface Care","Daily and periodic chemistry for hard surfaces, selected around soil type, material compatibility and operational routine.","assets/surface-care.jpg","Cleaner wiping down a stone countertop"],
   "Floor Care":["Floor Care","A floor-care plan starts with surface type, traffic level, finish requirements and the cleaning method in use.","assets/floor-care.jpg","Operator running a floor scrubber across a polished lobby floor","74% 38%"],
   "Washroom Hygiene":["Washroom Hygiene","Build a routine around touchpoints, scale, odour control and user experience.","assets/washroom-care.jpg","Cleaner wiping down a washroom vanity"],
-  "Kitchen & Foodservice":["Kitchen & Foodservice","Match products to grease load, food-contact considerations and cleaning frequency.","assets/kitchen.jpg","Cleaner wiping a stainless-steel prep table in a commercial kitchen","82% 55%"],
-  "Specialist Applications":["Specialist Applications","Specialist tasks need a defined process, compatibility check and controlled use."]
+  "Kitchen & Foodservice":["Kitchen & Foodservice","Match products to grease load, food-contact considerations and cleaning frequency.","assets/kitchen.jpg","Cleaner wiping a stainless-steel prep table in a commercial kitchen","74% 45%"],
+  "Specialist Applications":["Specialist Applications","Specialist tasks need a defined process, compatibility check and controlled use.","assets/applications.jpg","Technician in safety glasses cleaning industrial machinery with a spray lance","74% 30%"]
  },
  supply:{
   "Paper & Tissue":["Paper & Tissue","Plan for consumption, storage, user volume and replenishment intervals."],
